@@ -5,7 +5,7 @@ import Image from "next/image";
 import Video from 'next-video';
 import getStarted from '/videos/get-started.mp4';
 
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle, Textarea, Field, Label, Description, Select } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
 const Home = () => {
@@ -84,13 +84,51 @@ const Home = () => {
                 </div>
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <DialogTitle as="h3" className="text-base font-semibold text-gray-900">
-                    Deactivate account
+                    Feedback on <strong>Contraband</strong>?
                   </DialogTitle>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Are you sure you want to deactivate your account? All of your data will be permanently removed.
-                      This action cannot be undone.
+                      Provide your honest thoughts on <strong>Contraband</strong>. Answer the questions below from 1 to 5.
                     </p>
+                  </div>
+                  <div className="mt-2">
+                     <Field>
+                      <Label as="h3">I would recommend this film</Label>
+                        <Select className="mt-1 block" name="score_overall">
+                          <option>---- Select Choice ---</option>
+                          <option>Strongly Disagree</option>
+                          <option>Disagree</option>
+                          <option>Neither Agree or Disagree</option>
+                          <option>Agree</option>
+                          <option>Stronglh</option>
+                        </Select>
+                      </Field>
+                  </div>
+                  <div className="mt-2">
+                     <Field>
+                      <Label as="h3">I enjoy the acting in this film</Label>
+                        <Select className="mt-1 block" name="film_score">
+                          <option>---- Select Choice ---</option>
+                          <option>Strongly Disagree</option>
+                          <option>Disagree</option>
+                          <option>Neither Agree or Disagree</option>
+                          <option>Agree</option>
+                          <option>Stronglh</option>
+                        </Select>
+                      </Field>
+                  </div>
+                  <div className="mt-2">
+                     <Field>
+                      <Label as="h3">I enjoyed the production value of this film</Label>
+                        <Select className="mt-1 block" name="film_score">
+                          <option>---- Select Choice ---</option>
+                          <option>Strongly Disagree</option>
+                          <option>Disagree</option>
+                          <option>Neither Agree or Disagree</option>
+                          <option>Agree</option>
+                          <option>Stronglh</option>
+                        </Select>
+                      </Field>
                   </div>
                 </div>
               </div>
@@ -101,7 +139,7 @@ const Home = () => {
                 onClick={() => setOpen(false)}
                 className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto"
               >
-                Deactivate
+                Submit
               </button>
               <button
                 type="button"
