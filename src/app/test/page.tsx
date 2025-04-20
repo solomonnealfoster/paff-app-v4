@@ -91,44 +91,37 @@ const Home = () => {
                       Provide your honest thoughts on <strong>Contraband</strong>. Answer the questions below from 1 to 5.
                     </p>
                   </div>
+                
                   <div className="mt-2">
-                     <Field>
-                      <Label as="h3">I would recommend this film</Label>
-                        <Select className="mt-1 block" name="score_overall">
-                          <option>---- Select Choice ---</option>
-                          <option>Strongly Disagree</option>
-                          <option>Disagree</option>
-                          <option>Neither Agree or Disagree</option>
-                          <option>Agree</option>
-                          <option>Stronglh</option>
+                     <form class="max-w-sm mx-auto">
+                       <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>What would you rate this film?</strong></label>
+                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                            <option>---- Select Choice ---</option>
+                            <option>Strongly Agree</option>
+                            <option>Agree</option>
+                            <option>Neither Agree or Disagree</option>
+                            <option>Disagree</option>
+                            <option>Strongly Disagree</option>
                         </Select>
-                      </Field>
-                  </div>
-                  <div className="mt-2">
-                     <Field>
-                      <Label as="h3">I enjoy the acting in this film</Label>
-                        <Select className="mt-1 block" name="film_score">
-                          <option>---- Select Choice ---</option>
-                          <option>Strongly Disagree</option>
-                          <option>Disagree</option>
-                          <option>Neither Agree or Disagree</option>
-                          <option>Agree</option>
-                          <option>Stronglh</option>
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>I would watch this film again?</strong></label>
+                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                            <option>---- Select Choice ---</option>
+                            <option>Strongly Agree</option>
+                            <option>Agree</option>
+                            <option>Neither Agree or Disagree</option>
+                            <option>Disagree</option>
+                            <option>Strongly Disagree</option>
                         </Select>
-                      </Field>
-                  </div>
-                  <div className="mt-2">
-                     <Field>
-                      <Label as="h3">I enjoyed the production value of this film</Label>
-                        <Select className="mt-1 block" name="film_score">
-                          <option>---- Select Choice ---</option>
-                          <option>Strongly Disagree</option>
-                          <option>Disagree</option>
-                          <option>Neither Agree or Disagree</option>
-                          <option>Agree</option>
-                          <option>Stronglh</option>
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>What would you rate this film?</strong></label>
+                        <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                            <option>---- Select Choice ---</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
                         </Select>
-                      </Field>
+                      </form>
                   </div>
                 </div>
               </div>
