@@ -76,16 +76,6 @@ const [formValues, setFormValues] = useState()
     
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="padding-top">
-<div class="grid grid-cols-3 gap-4">
-  <div class="...">01</div>
-  <div class="...">02</div>
-  <div class="...">03</div>
-  <div class="col-span-2 ...">04</div>
-  <div class="...">05</div>
-  <div class="...">06</div>
-  <div class="col-span-2 ...">07</div>
-</div>
-      
         <Video 
             src="https://stream.mux.com/g8VVMXEcD4rzVm8jYtQHCyZBXTI4yEGt6y6hcrFRJYQ.m3u8" 
             onTimeUpdate={onTimeUpdate}
