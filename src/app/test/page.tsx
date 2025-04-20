@@ -11,10 +11,16 @@ import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 const Home = () => {
   const ref = useRef(null);
   const [open, setOpen] = useState(true)
+  var lastTime = null;
+  var curTime = null;
 
-  function onTimeUpdate(event) {
-    console.log(event);
-    console.log(this.currentTime);
+    function onTimeUpdate(event) {
+      console.log(this);
+      console.log(this.currentTime, " of ", this.duration);
+      curTime = this.currentTime
+      if (curTime > 5){
+        console.log("Past 5");
+      }
     }
 
       function onPause(event) {
@@ -36,7 +42,7 @@ const Home = () => {
 
     const element = ref.current;
 
-    element.addEventListener('click', handleClick);
+ //   element.addEventListener('click', handleClick);
   // element.addEventListener('play', playEvent);
    //element.addEventListener('pause', pauseEvent);
 
@@ -54,7 +60,6 @@ const Home = () => {
     
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="padding-top">
-       <button ref={ref}>Click</button>
         <Video 
             src="https://stream.mux.com/g8VVMXEcD4rzVm8jYtQHCyZBXTI4yEGt6y6hcrFRJYQ.m3u8" 
             onTimeUpdate={onTimeUpdate}
