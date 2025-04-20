@@ -44,10 +44,14 @@ const [formValues, setFormValues] = useState()
     console.log("PLAY");
     }
 
+    function handleChangeSelect(event) {
+      console.log(event.target.name)
+      console.log(event.target.value)
+    }
+
   useEffect(() => {
     const handleClick = event => {
       console.log('Button clicked');
-
       console.log('bobbyhadz.com');
       console.log(this)
     };
@@ -111,11 +115,13 @@ const [formValues, setFormValues] = useState()
                 
                   <div className="mt-2">
                      <form class="max-w-sm mx-auto">
-                       <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>What would you rate this film?</strong></label>
-                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score"
-                        onChange={(event) =>
-                          { alert(event.target.value) }
-                        } 
+                       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top">
+                          <strong>What would you rate this film?</strong>
+                        </label>
+                       <Select 
+                        name="film_rating_score"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        onChange={handleChangeSelect}
                        >
                             <option>---- Select Choice ---</option>
                             <option>Strongly Agree</option>
@@ -124,8 +130,14 @@ const [formValues, setFormValues] = useState()
                             <option>Disagree</option>
                             <option>Strongly Disagree</option>
                         </Select>
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>I would watch this film again?</strong></label>
-                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top">
+                            <strong>I would watch this film again?</strong>
+                        </label>
+                        <Select 
+                        name="film_watching_score"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        onChange={handleChangeSelect}
+                       >
                             <option>---- Select Choice ---</option>
                             <option>Strongly Agree</option>
                             <option>Agree</option>
@@ -133,14 +145,20 @@ const [formValues, setFormValues] = useState()
                             <option>Disagree</option>
                             <option>Strongly Disagree</option>
                         </Select>
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>What would you rate this film?</strong></label>
-                        <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top">
+                            <strong>What would you score this film?</strong>
+                        </label>
+                        <Select 
+                        name="film_quality_score"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        onChange={handleChangeSelect}
+                       >
                             <option>---- Select Choice ---</option>
-                            <option>5</option>
-                            <option>4</option>
-                            <option>3</option>
-                            <option>2</option>
-                            <option>1</option>
+                            <option>5 - Best</option>
+                            <option>4 - Good</option>
+                            <option>3 - Fair</option>
+                            <option>2 - Poor</option>
+                            <option>1 - Lowest</option>
                         </Select>
                       </form>
                   </div>
