@@ -11,8 +11,9 @@ import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 const Home = () => {
   const ref = useRef(null);
   const [open, setOpen] = useState(true)
-  var lastTime = null;
-  var curTime = null;
+  var lastTime = 0;
+  var curTime = 0;
+
 
     function onTimeUpdate(event) {
       console.log(this);
@@ -22,6 +23,17 @@ const Home = () => {
         console.log("Past 5");
       }
     }
+
+const [formValues, setFormValues] = useState()
+
+  useEffect(() => {
+    /*Close Modal*/
+      //setOpen(false)
+  }, [])
+
+    function componentDidMount() {
+           alert("MOUNTED");
+        }
 
       function onPause(event) {
     console.log("PAUSED");
@@ -100,7 +112,11 @@ const Home = () => {
                   <div className="mt-2">
                      <form class="max-w-sm mx-auto">
                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white padding-bottom-top"><strong>What would you rate this film?</strong></label>
-                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score">
+                       <Select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="film_score"
+                        onChange={(event) =>
+                          { alert(event.target.value) }
+                        } 
+                       >
                             <option>---- Select Choice ---</option>
                             <option>Strongly Agree</option>
                             <option>Agree</option>
